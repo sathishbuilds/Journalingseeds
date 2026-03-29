@@ -450,7 +450,7 @@ function App(){
             mood:row.mood,
             gratitudes:row.gratitudes||[],
             todos:row.todos||[],
-            image_url:row.image_url||null,
+            image:row.image_url||null,
             createdAt:row.created_at
           };
         });
@@ -480,7 +480,7 @@ function App(){
           mood:entry.mood,
           gratitudes:entry.gratitudes||[],
           todos:entry.todos||[],
-          image_url:entry.image_url||null,
+          image_url:entry.image||null,
           updated_at:new Date().toISOString()
         },{onConflict:"user_id,date"});
       }catch(e){console.error("Save error:",e);}
